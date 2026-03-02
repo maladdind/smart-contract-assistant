@@ -4,6 +4,7 @@ from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
+# This file contains functions for loading documents, splitting them into chunks, and preparing them for vectorization.
 def load_document(file_path: str) -> List[Document]:
     ext = os.path.splitext(file_path)[1].lower()
     if ext == ".pdf":

@@ -5,5 +5,5 @@ def get_llm():
     return ChatOllama(
         model="mistral",
         temperature=0,
-        num_predict=512 # Optimized for contract analysis
+        num_predict=512 # Optimized for concise outptut 
     )

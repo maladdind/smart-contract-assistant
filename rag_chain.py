@@ -5,7 +5,7 @@ from langchain_core.prompts import ChatPromptTemplate
 def build_qa_chain(llm, vector_store):
     retriever = vector_store.as_retriever(search_kwargs={"k": 4})
     
-    # Precise system prompt for legal documents
+    # Precise system prompt for uploaded documents
     system_prompt = (
         "You are a Legal Assistant specializing in smart contracts. "
         "Use the following pieces of context to answer the question. "
@@ -19,6 +19,6 @@ def build_qa_chain(llm, vector_store):
         ("human", "{input}"),
     ])
     
-    # Modern chain construction
+    # chain construction
     question_answer_chain = create_stuff_documents_chain(llm, prompt)
     return create_retrieval_chain(retriever, question_answer_chain)
