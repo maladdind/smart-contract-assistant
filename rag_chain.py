@@ -1,3 +1,5 @@
+# This module defines the RAG (Retrieval-Augmented Generation) chain,
+#  which combines a retriever (vector store) with a question-answering chain to provide accurate responses based on the uploaded documents.
 from langchain_classic.chains import create_retrieval_chain
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate

@@ -17,7 +17,7 @@ async def upload_file(file: UploadFile = File(...)):
     with open(temp_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
     
-    # Process
+    # Process the document: load, split, and create vector store
     docs = load_document(temp_path)
     chunks = split_documents(docs)
     vectordb = create_vector_store(chunks)

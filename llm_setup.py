@@ -1,5 +1,5 @@
 from langchain_ollama import ChatOllama
-
+# setting the local llm for later use
 def get_llm():
     """Returns a ChatOllama instance using the mistral model."""
     return ChatOllama(

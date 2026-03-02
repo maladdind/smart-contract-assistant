@@ -1,7 +1,8 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
-# This model runs natively on M3 via CPU/MPS
+# Centralized vector store management for document embeddings. This module handles both creation and
+# loading of the Chroma vector store, ensuring consistent embedding generation with HuggingFace models.
 embedding_model = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 def create_vector_store(documents, persist_directory="./chroma_db"):
@@ -11,7 +12,7 @@ def create_vector_store(documents, persist_directory="./chroma_db"):
         embedding=embedding_model,
         persist_directory=persist_directory
     )
-
+# 
 def load_vector_store(persist_directory="./chroma_db"):
     """Loads an existing store from disk."""
     return Chroma(
