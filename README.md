@@ -43,8 +43,10 @@ pip cache purge
 ```
 
 ### 2. Dependency Installation
-
-Install the specific modular packages required:
+```bash
+pip install -r requirements.txt
+```
+or manually Install the specific modular packages required:
 
 ```bash
 # Core LangChain & Classic Bridge

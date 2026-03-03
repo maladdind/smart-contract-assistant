@@ -214,3 +214,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python environment
+venv/
+venv_stable/
+.env
+
+# Local Vector Database (Large files)
+chroma_db/
+
+# Temporary upload files
+temp_*
+*.pdf
+*.docx
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE settings
+.vscode/
+.DS_Store
